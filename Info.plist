@@ -39,7 +39,9 @@
 	<key>UISupportedInterfaceOrientations~ipad</key>
 	<array>
 		<string>UIInterfaceOrientationPortrait</string>
-		<string>UIInterfaceOrientationPortraitUpsideDown</string>
+		<string>
+        
+        </string>
 		<string>UIInterfaceOrientationLandscapeLeft</string>
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
@@ -48,7 +50,7 @@
         <dict>
             <key>CFBundleURLSchemes</key>
             <array>
-                <string>881935715273794</string>
+                <string>fb881935715273794</string>
             </array>
         </dict>
     </array>

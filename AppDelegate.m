@@ -8,6 +8,7 @@
 
 #import "AppDelegate.h"
 #import <FBSDKCoreKit/FBSDKCoreKit.h>
+#import "ViewController.h"
 
 @interface AppDelegate ()
 
@@ -19,9 +20,12 @@
 - (BOOL)application:(UIApplication *)application
 didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     
-    [[FBSDKApplicationDelegate sharedInstance] application:application
-                             didFinishLaunchingWithOptions:launchOptions];
-    // Add any custom logic here.
+    
+    ViewController *new=[[ViewController alloc]init];
+    
+    UINavigationController *root=[[UINavigationController alloc]initWithRootViewController:new];
+    self.window.rootViewController=root;
+    
     return YES;
 }
 
