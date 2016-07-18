@@ -18,24 +18,25 @@
 
 
 
-
-
 - (void)viewDidLoad {
     [super viewDidLoad];
     
     self.view.backgroundColor=[UIColor whiteColor];
     
     FBSDKLoginButton  *loginBtn =[[FBSDKLoginButton alloc]init];
-    UIButton *Button=[[UIButton alloc]initWithFrame:CGRectMake(50, 300, 80, 30)];
-    [self.view addSubview:Button];
-    
-    Button.backgroundColor=[UIColor blueColor];
-    [Button setTitle:@"" forState:UIControlStateNormal];
-    
-    
-    
     loginBtn.center=self.view.center;
     [self.view addSubview:loginBtn];
+    
+    UIButton *Button=[[UIButton alloc]initWithFrame:CGRectMake(120, 220, 80, 30)];
+    [self.view addSubview:Button];
+    
+    Button.backgroundColor=[UIColor orangeColor];
+    [Button setTitle:@"Button" forState:UIControlStateNormal];
+    
+    
+    
+//    loginBtn.center=self.view.center;
+//    [self.view addSubview:loginBtn];
     // Do any additional setup after loading the view, typically from a nib.
 }
 
