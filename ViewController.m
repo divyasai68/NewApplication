@@ -9,6 +9,7 @@
 #import "ViewController.h"
 #import <FBSDKCoreKit/FBSDKCoreKit.h>
 #import <FBSDKLoginKit/FBSDKLoginKit.h>
+#import "TableViewController.h"
 
 @interface ViewController ()
 
@@ -27,17 +28,23 @@
     loginBtn.center=self.view.center;
     [self.view addSubview:loginBtn];
     
-    UIButton *Button=[[UIButton alloc]initWithFrame:CGRectMake(120, 220, 80, 30)];
-    [self.view addSubview:Button];
-    
-    Button.backgroundColor=[UIColor orangeColor];
-    [Button setTitle:@"Button" forState:UIControlStateNormal];
+    UIButton *button=[[UIButton alloc]initWithFrame:CGRectMake(160, 220, 80, 30)];
+
     
     
+    button.backgroundColor=[UIColor orangeColor];
+    [button setTitle:@"Button" forState:UIControlStateNormal];
+    [button addTarget:self action:@selector(clickEvent:)forControlEvents:UIControlEventTouchUpInside];
+    [self.view addSubview:button];
     
-//    loginBtn.center=self.view.center;
-//    [self.view addSubview:loginBtn];
+
     // Do any additional setup after loading the view, typically from a nib.
+}
+
+-(IBAction)clickEvent:(id)sender
+{
+    TableViewController  *table =[[TableViewController alloc]init];
+    [self.navigationController pushViewController:table animated:YES];
 }
 
 - (void)didReceiveMemoryWarning {

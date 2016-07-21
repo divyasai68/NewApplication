@@ -8,6 +8,7 @@
 
 #import "AppDelegate.h"
 #import <FBSDKCoreKit/FBSDKCoreKit.h>
+#import <FBSDKLoginKit/FBSDKLoginKit.h>
 #import "ViewController.h"
 
 @interface AppDelegate ()
@@ -26,8 +27,14 @@ didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     UINavigationController *root=[[UINavigationController alloc]initWithRootViewController:new];
     self.window.rootViewController=root;
     
+//    UITableView *tableview=[[UITableView alloc]init];
+    
+//    UINavigationController *root=[[UINavigationController alloc]initWithRootViewController:view];
+//    self.window.rootViewController=root;
+    
     return YES;
 }
+
 
 - (BOOL)application:(UIApplication *)application openURL:(NSURL *)url
   sourceApplication:(NSString *)sourceApplication annotation:(id)annotation {
